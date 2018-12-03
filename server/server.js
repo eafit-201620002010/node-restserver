@@ -13,8 +13,9 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
-// importar rutas del usuario
-app.use(require('./routes/usuario'));
+// importar rutas
+app.use(require('./routes/index'));
+
 
 
 mongoose.connect(process.env.URLDB, (err, res) => {
